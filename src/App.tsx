@@ -4,8 +4,10 @@
  */
 
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 import SplashScreen from 'react-native-lottie-splash-screen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ServiceProviderWithTheme, ThemeProvider } from '@nghinv/react-native-design';
+import Navigator from './navigator';
 
 function App() {
   useEffect(() => {
@@ -13,19 +15,14 @@ function App() {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>App</Text>
-    </View>
+    <SafeAreaProvider>
+      <ThemeProvider themeMode='dark'>
+        <ServiceProviderWithTheme>
+          <Navigator />
+        </ServiceProviderWithTheme>
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'tomato',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default React.memo(App);
