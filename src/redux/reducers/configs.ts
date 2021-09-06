@@ -5,7 +5,7 @@
 
 import { AnyAction } from 'redux';
 import { CHANGE_LANGUAGE } from '../actions/configs';
-import { LanguageType } from '../type';
+import { LanguageType } from '../types';
 
 type State = {
   language: LanguageType;

@@ -1,5 +1,7 @@
 # react-native-template
 
+Full typescript support
+
 ## Install
 
 run `yarn` or `npm install`
@@ -16,14 +18,6 @@ run `yarn android`
 
 run `yarn rename newProjectName`
 
-## Theme
+## Library
 
-## Components
-
-## Navigation
-
-## Redux
-
-## Storage
-
-[react-native-mmkv](https://github.com/mrousavy/react-native-mmkv)
+Check in [here](docs/LIBRARY)

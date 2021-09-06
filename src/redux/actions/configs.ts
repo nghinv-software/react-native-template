@@ -3,7 +3,7 @@
  * Copyright (c) 2021 nguyennghidt6@gmail.com
  */
 
-import { LanguageType } from '../type';
+import { LanguageType } from '../types';
 
 export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
 
