@@ -16,6 +16,8 @@
     "reset": "watchman watch-del-all && rm -rf $TMDIR/react-* && rm -rf node_modules && yarn cache clean",
     "reinstall": "rm -rf node_module/ && yarn",
     "test": "jest",
+    "server:install": "cd servers && yarn",
+    "server:start": "cd servers && yarn start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {

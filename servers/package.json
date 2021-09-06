@@ -1,0 +1,21 @@
+{
+  "name": "testing-server",
+  "description": "From the \"Get started\" section of the Apollo Client docs.",
+  "dependencies": {
+    "apollo-datasource-rest": "latest",
+    "apollo-server": "2.10.1",
+    "graphql": "14.6.0",
+    "lodash": "4.17.15",
+    "node-fetch": "2.6.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js localhost 4000"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/graphql": "14.0.1",
+    "nodemon": "1.18.4"
+  }
+}

@@ -6,9 +6,9 @@ Full typescript support
 
 run `yarn` or `npm install`
 
-### Ios
+### IOS
 
-run `yarn pod` & `yarn ios`
+run `yarn pod` && `yarn ios`
 
 ### Android 
 
