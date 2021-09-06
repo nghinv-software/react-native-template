@@ -7,6 +7,8 @@ import React, { useEffect } from 'react';
 import SplashScreen from 'react-native-lottie-splash-screen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ServiceProviderWithTheme, ThemeProvider } from '@nghinv/react-native-design';
+import { Provider } from 'react-redux';
+import { store } from './redux/configureStore';
 import Navigator from './navigator';
 
 function App() {
@@ -15,13 +17,15 @@ function App() {
   }, []);
 
   return (
-    <SafeAreaProvider>
-      <ThemeProvider themeMode='dark'>
-        <ServiceProviderWithTheme>
-          <Navigator />
-        </ServiceProviderWithTheme>
-      </ThemeProvider>
-    </SafeAreaProvider>
+    <Provider store={store}>
+      <SafeAreaProvider>
+        <ThemeProvider themeMode='dark'>
+          <ServiceProviderWithTheme>
+            <Navigator />
+          </ServiceProviderWithTheme>
+        </ThemeProvider>
+      </SafeAreaProvider>
+    </Provider>
   );
 }
 
