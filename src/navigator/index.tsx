@@ -30,7 +30,7 @@ function Navigator() {
         initialRouteName={Routes.DASHBOARD}
       >
         <Stack.Screen name={Routes.DASHBOARD} component={DashboardScreen} />
-        <Stack.Screen options={{}} name={Routes.SETTINGS} component={SettingsScreen} />
+        <Stack.Screen name={Routes.SETTINGS} component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
