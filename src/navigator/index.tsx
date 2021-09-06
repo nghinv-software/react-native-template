@@ -11,7 +11,7 @@ import DashboardScreen from '../screens/dashboard';
 import SettingsScreen from '../screens/settings';
 import { Routes } from '../utils/routes';
 
-// enableScreens(true);
+enableScreens(true);
 
 const Stack = createNativeStackNavigator();
 
