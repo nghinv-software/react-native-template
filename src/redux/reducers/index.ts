@@ -5,14 +5,14 @@
 
 'use strick';
 
-import AsyncStorage from '@react-native-community/async-storage';
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
+import { reduxStorage } from '../storage';
 import Configs from './configs';
 
 const setupConfig = {
   key: 'configReducer',
-  storage: AsyncStorage,
+  storage: reduxStorage,
 };
 
 export default combineReducers({

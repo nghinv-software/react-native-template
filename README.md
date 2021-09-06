@@ -23,3 +23,7 @@ run `yarn rename newProjectName`
 ## Navigation
 
 ## Redux
+
+## Storage
+
+[react-native-mmkv](https://github.com/mrousavy/react-native-mmkv)
