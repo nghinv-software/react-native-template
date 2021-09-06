@@ -117,4 +117,4 @@ Use `eslint` extension
 
 Use hooky to check git commit
 
-Check rule commit in [here](Contributing)
+Check rule commit in [here](/CONTRIBUTING.md)

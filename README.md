@@ -20,4 +20,4 @@ run `yarn rename newProjectName`
 
 ## Library
 
-Check in [here](docs/LIBRARY)
+Check in [here](/docs/LIBRARY.md)
