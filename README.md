@@ -18,6 +18,16 @@ run `yarn android`
 
 run `yarn rename newProjectName`
 
+## GraphQL server
+
+- Install graphql server
+
+run `yarn server:install`
+
+- Run server
+
+run `yarn server:start`
+
 ## Library
 
 Check in [here](/docs/LIBRARY.md)

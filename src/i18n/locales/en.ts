@@ -3,8 +3,7 @@
  * Copyright (c) 2021 nguyennghidt6@gmail.com
  */
 
-import TranslateText from './Text';
-
-export {
-  TranslateText,
+export default {
+  loading: 'Loading...',
+  error: 'Error',
 };

@@ -97,7 +97,27 @@ Check folder src/redux
 
 5. Use `useSelect` hook to get data to View
 
+## Languages
+
+Use [react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n) library
+
+
+
 ## GraphQL
+
+- Install graphql server
+
+run `yarn server:install`
+
+- Run server
+
+run `yarn server:start`
+
+- Change GraphQL server uri in .env file
+
+- Write logic query in src/graphql folder
+
+- Connect to screen use `useQuery`
 
 ## Navigation
 
