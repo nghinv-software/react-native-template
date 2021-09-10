@@ -6,17 +6,21 @@
 import React from 'react';
 import { Text } from '@nghinv/react-native-design';
 import { TextPropsType } from '@nghinv/react-native-design/lib/typescript/components/Text';
-import { connect } from 'react-redux';
-import { LanguageType, RootState } from '../../redux/types';
+import { observer } from 'mobx-react-lite';
+import { getSnapshot } from 'mobx-state-tree';
 import i18n from '../../i18n';
+import rootStore from '../../stores';
 
 interface TranslateTextType extends TextPropsType {
-  language: LanguageType;
+  language?: string;
   translateKey?: string;
 }
 
 function TranslateText(props: TranslateTextType) {
   const { translateKey, children } = props;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { language } = getSnapshot(rootStore).configs;
+
   return (
     <Text {...props}>
       {translateKey ? i18n.t(translateKey) : children}
@@ -24,10 +28,4 @@ function TranslateText(props: TranslateTextType) {
   );
 }
 
-const mapStateToProps = (state: RootState) => {
-  return {
-    language: state.configs.language,
-  };
-};
-
-export default connect(mapStateToProps)(TranslateText);
+export default observer(TranslateText);

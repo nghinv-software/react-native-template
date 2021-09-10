@@ -71,19 +71,16 @@ Config.GOOGLE_MAPS_API_KEY; // 'abcdefgh'
 
 [react-native-mmkv](https://github.com/mrousavy/react-native-mmkv)
 
-## Redux
+## Stores
 
-Check folder src/redux
+- [mobx](https://mobx.js.org/README.html)
+- [mobx-react](https://mobx.js.org/README.html)
+- [mobx-react-lite](https://github.com/mobxjs/mobx-react-lite)
+- [mobx-state-tree](https://mobx-state-tree.js.org/intro/welcome)
 
-* [redux](https://redux.js.org)
+1. Add new store file to src/stores folder
 
-* [react-redux](https://react-redux.js.org)
-
-* [redux-saga](https://redux-saga.js.org)
-
-* [redux-persist](https://github.com/rt2zz/redux-persist)
-
-* [reselect](https://github.com/reduxjs/reselect)
+2. Import new store to src/stores/index.ts file
 
 ### Follow to add a action
 

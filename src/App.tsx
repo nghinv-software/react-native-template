@@ -7,11 +7,15 @@ import React, { useEffect } from 'react';
 import SplashScreen from 'react-native-lottie-splash-screen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ServiceProviderWithTheme, ThemeProvider } from '@nghinv/react-native-design';
-import { Provider } from 'react-redux';
 import { ApolloProvider } from '@apollo/client';
-import { store } from './redux/configureStore';
+import { Provider } from 'mobx-react';
+import rootStore from './stores';
 import Navigator from './navigator';
 import { client } from './graphql';
+
+const stores = {
+  rootStore,
+};
 
 function App() {
   useEffect(() => {
@@ -19,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <Provider store={store}>
+    <Provider {...stores}>
       <ApolloProvider client={client}>
         <SafeAreaProvider>
           <ThemeProvider themeMode='dark'>

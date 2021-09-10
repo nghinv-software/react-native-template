@@ -4,29 +4,27 @@
  */
 
 import React, { useCallback } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import { useTheme, Container, Button, SizeBox } from '@nghinv/react-native-design';
 import { useNavigation } from '@react-navigation/core';
 import { useQuery } from '@apollo/client';
-import { useDispatch } from 'react-redux';
+import { observer } from 'mobx-react-lite';
+import rootStore from '../../stores';
 import { EXCHANGE_RATES } from '../../graphql/helper';
 import i18n from '../../i18n';
 import { TranslateText } from '../../components';
-import { setLanguage } from '../../redux/actions/configs';
 
 function Settings() {
   const { theme } = useTheme();
   const navigation = useNavigation();
   const { loading, error, data } = useQuery(EXCHANGE_RATES);
-  const dispatch = useDispatch();
-
   const onBack = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
   const onToggleLanguage = useCallback(() => {
-    dispatch(setLanguage(i18n.locale === 'en' ? 'vi' : 'en'));
-  }, [dispatch]);
+    rootStore.configs.setLanguage(i18n.locale === 'en' ? 'vi' : 'en');
+  }, []);
 
   return (
     <Container style={styles.container}>
@@ -61,4 +59,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(Settings);
+export default React.memo(observer(Settings));
